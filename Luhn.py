@@ -20,6 +20,7 @@ def is_luhn_valid(card_number):
  
 
 def generate_CC(template):
+    template = template.replace('X','x').replace('-','').replace(' ','')
     start = len(template)
     end = 0
     for m in re.finditer('x', template):
